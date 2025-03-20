@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(232, 232, 232);
+    margin: 0px;
+    height: 100vh;
+}
+
+.bodyBox{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    background-color: white;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: rgb(116, 116, 116);
+}
+
+article{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.box{
+    background-color: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 15px;
+}
