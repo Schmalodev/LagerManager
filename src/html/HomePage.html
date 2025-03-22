@@ -9,24 +9,26 @@
 <body>
 
 <nav>
-    <ul>
-        <a href="">HomePage</a>
-    </ul>
+    <a href="HomePage.html">HomePage</a>
+    <a href="AddLager.html">AddTodo</a>
 </nav>
 
-<div class="bodyBox">
+<div id="bodyBox" class="bodyBox">
 
     <article>
-        <div class="box">
-            <div>
-                <i>Lager</i>
-                <div></div>
-                <i>Bestand</i>
-            </div>
-        </div>
+        
     </article>
 
 </div>
+
+<script>
+    fetch("https://schmalodev.pythonanywhere.com/show")
+.then(data => data.json())
+.then(response => 
+    response.forEach(element => {
+       document.getElementById("bodyBox").append +=  document.getElementById("bodyBox").innerHTML += '<div class="box"><div><i>'+ JSON.stringify(element)+'</i><div></div></div></div>'
+    }));
+</script>
 
 </body>
 </html>
