@@ -1,6 +1,14 @@
 const button = document.getElementById("submit");
-var Lager = document.getElementById("Lager").value;
 
 button.addEventListener("click", function(){
-    console.log(Lager);
+    let Lager = document.getElementById("Lager").value;
+    let Stand = document.getElementById("Stand").value;
+
+    fetch("https://schmalodev.pythonanywhere.com/addItem", {
+        method: "POST",
+        headers:{ 
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({Lager, Stand})
+    })
 })
