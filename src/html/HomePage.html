@@ -22,12 +22,15 @@
 </div>
 
 <script>
-    fetch("https://schmalodev.pythonanywhere.com/show")
+fetch("https://schmalodev.pythonanywhere.com/show")
 .then(data => data.json())
 .then(response => 
-    response.forEach(element => {
-       document.getElementById("bodyBox").append +=  document.getElementById("bodyBox").innerHTML += '<div class="box"><div><i>'+ JSON.stringify(element)+'</i><div></div></div></div>'
-    }));
+{
+    for(item in response){
+        document.getElementById("bodyBox").append +=  document.getElementById("bodyBox").innerHTML += '<div class="box"><div><i>'+ JSON.stringify(item + ":" + response[item])+'</i><div></div></div></div>'
+    }
+}
+);
 </script>
 
 </body>
