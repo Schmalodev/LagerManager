@@ -32,7 +32,14 @@ function del(){
             {item}
         )
     })
-    window.location.href = "HomePage.html"
+    while (isRun){
+        if (counter == 220){
+            isRun = false;
+            window.location.href = "HomePage.html"
+        }else{
+            counter++;
+        }
+    }
 }
 fetch("https://schmalodev.pythonanywhere.com/show")
 .then(data => data.json())
