@@ -22,14 +22,26 @@
 </div>
 
 <script>
+function del(){
+    fetch("https://schmalodev.pythonanywhere.com/DelItem", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(
+            {item}
+        )
+    })
+}
 fetch("https://schmalodev.pythonanywhere.com/show")
 .then(data => data.json())
 .then(response => 
 {
+
     for(item in response){
-        document.getElementById("bodyBox").append +=  document.getElementById("bodyBox").innerHTML += '<div class="box"><div><i>'+ JSON.stringify(item + ":" + response[item])+'</i><div></div></div></div>'
+        document.getElementById("bodyBox").append +=  document.getElementById("bodyBox").innerHTML += '<div class="box"><div><i>'+ JSON.stringify(item + ":" + response[item])+'</i><div id='+item+' class="font"></div><button class="Del" onclick="del()">Delet</button></div></div>'
+        };
     }
-}
 );
 </script>
 
