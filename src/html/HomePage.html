@@ -23,6 +23,8 @@
 
 <script>
 function del(){
+    counter = 0;
+    isRun = true;
     fetch("https://schmalodev.pythonanywhere.com/DelItem", {
         method: "POST",
         headers: {
@@ -32,7 +34,14 @@ function del(){
             {item}
         )
     })
-    window.location.href = "HomePage.html"
+    while (isRun){
+        if (counter == 220){
+            isRun = false;
+            window.location.href = "HomePage.html"
+        }else{
+            counter++;
+        }
+    }
 }
 fetch("https://schmalodev.pythonanywhere.com/show")
 .then(data => data.json())
