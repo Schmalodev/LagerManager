@@ -23,6 +23,8 @@
 
 <script>
 function del(){
+    counter = 0;
+    isRun = true;
     fetch("https://schmalodev.pythonanywhere.com/DelItem", {
         method: "POST",
         headers: {
