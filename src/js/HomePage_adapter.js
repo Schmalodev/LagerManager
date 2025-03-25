@@ -11,4 +11,6 @@ button.addEventListener("click", function(){
         },
         body: JSON.stringify({Lager, Stand})
     })
+
+    window.location.href = "HomePage.html"
 })
