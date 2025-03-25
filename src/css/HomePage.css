@@ -45,3 +45,16 @@ article{
     align-items: end;
     padding: 15px;
 }
+
+.font{
+    padding: 5px;
+}
+
+.Del{
+    background-color: red;
+    color: white;
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 15px;
+}
